@@ -1,0 +1,11 @@
+<ul>
+<% @companies.each do |company| %>
+  <li>
+    <div>
+      <p><%= "Company name: " + company.name %></p>
+      <p><%= "Tags: " + company.tags.pluck(:name).join(', ') %></p>
+      <p><%= "Contact persons: " + company.contacts.size.to_s %></p>
+    </div>
+  </li>
+<%end%>
+</ul>
